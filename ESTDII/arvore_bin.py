@@ -144,19 +144,20 @@ class BinaryTree:
 # Exemplo de uso
 # ============================
 if __name__ == "__main__":
-    tree = BinaryTree()
-    # valores = [1, 2, 3, 4, 5, 6]
-    valores = [6, 5, 4, 3, 2, 1]
+
+    print("\nÁrvore 1")
+    tree1 = BinaryTree()
+    valores = [1, 2, 3, 4, 5, 6]
     for v in valores:
-        tree.insert_level_order(v)
+        tree1.insert_level_order(v)
 
     in_ord = []
-    tree.inorder(tree.root, in_ord)
+    tree1.inorder(tree1.root, in_ord)
     pre_ord = []
-    tree.preorder(tree.root, pre_ord)
+    tree1.preorder(tree1.root, pre_ord)
     post_ord = []
-    tree.postorder(tree.root, post_ord)
-    level_ord = tree.level_order()
+    tree1.postorder(tree1.root, post_ord)
+    level_ord = tree1.level_order()
 
     print("In-Order:", in_ord)
     print("Pré-Order:", pre_ord)
@@ -164,8 +165,34 @@ if __name__ == "__main__":
     print("Level-Order:", level_ord)
 
     print("\nClassificação da árvore:")
-    if tree.is_perfect(): print("Perfeita")
-    if tree.is_complete(): print("Completa")
-    if tree.is_regular(): print("Regular")
-    if tree.is_balanced(): print("Balanceada")
-    if tree.is_unbalanced(): print("Desbalanceada")
+    if tree1.is_perfect(): print("Perfeita")
+    if tree1.is_complete(): print("Completa")
+    if tree1.is_regular(): print("Regular")
+    if tree1.is_balanced(): print("Balanceada")
+    if tree1.is_unbalanced(): print("Desbalanceada")
+
+    print("\nÁrvore 2")
+    tree2 = BinaryTree()
+    valores = [6, 5, 4, 3, 2, 1, 0]
+    for v in valores:
+        tree2.insert_level_order(v)
+
+    in_ord = []
+    tree2.inorder(tree2.root, in_ord)
+    pre_ord = []
+    tree2.preorder(tree2.root, pre_ord)
+    post_ord = []
+    tree2.postorder(tree2.root, post_ord)
+    level_ord = tree2.level_order()
+
+    print("In-Order:", in_ord)
+    print("Pré-Order:", pre_ord)
+    print("Pós-Order:", post_ord)
+    print("Level-Order:", level_ord)
+
+    print("\nClassificação da árvore:")
+    if tree2.is_perfect(): print("Perfeita")
+    if tree2.is_complete(): print("Completa")
+    if tree2.is_regular(): print("Regular")
+    if tree2.is_balanced(): print("Balanceada")
+    if tree2.is_unbalanced(): print("Desbalanceada")
